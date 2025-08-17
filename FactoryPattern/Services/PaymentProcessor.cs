@@ -26,8 +26,9 @@ namespace FactoryPattern.Services
 
 
         //open/closed principle
-        public void ProcessPayment(IPayment payment , decimal price)
+        public void ProcessPayment(decimal price)
         {
+            IPayment payment = CreatePaymentMethod();
             payment.ProcessPayment(price);
         }
 

@@ -1,5 +1,4 @@
-﻿using FactoryPattern.Models;
-using FactoryPattern.Services;
+﻿using FactoryPattern.Services;
 
 namespace FactoryPattern
 {
@@ -7,7 +6,7 @@ namespace FactoryPattern
     {
         static void Main(string[] args)
         {
-            string userType = "internal";
+            string userType = "external";
             decimal price = 50.00m;
 
             PaymentProcessor paymentProcessor;
@@ -24,8 +23,7 @@ namespace FactoryPattern
                 paymentProcessor = new StandardPaymentProcessor();
             }
 
-            IPayment paymentMethod = paymentProcessor.CreatePaymentMethod();
-            paymentProcessor.ProcessPayment(paymentMethod , price);
+            paymentProcessor.ProcessPayment(price);
 
             Console.ReadKey();
         }
