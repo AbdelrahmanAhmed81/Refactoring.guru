@@ -32,6 +32,6 @@ namespace FactoryPattern.Services
             payment.ProcessPayment(price);
         }
 
-        public abstract IPayment CreatePaymentMethod();
+        protected abstract IPayment CreatePaymentMethod();
     }
 }

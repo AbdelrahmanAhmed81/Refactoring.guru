@@ -2,9 +2,9 @@
 
 namespace FactoryPattern.Services
 {
-    public class StandardPaymentProcessor : PaymentProcessor
+    internal class StandardPaymentProcessor : PaymentProcessor
     {
-        public override IPayment CreatePaymentMethod()
+        protected override IPayment CreatePaymentMethod()
         {
             return new CreditCard();
         }

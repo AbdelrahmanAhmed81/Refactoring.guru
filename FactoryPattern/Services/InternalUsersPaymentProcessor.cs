@@ -4,7 +4,7 @@ namespace FactoryPattern.Services
 {
     internal class InternalUsersPaymentProcessor : PaymentProcessor
     {
-        public override IPayment CreatePaymentMethod()
+        protected override IPayment CreatePaymentMethod()
         {
             return new BankTransfer();
         }
